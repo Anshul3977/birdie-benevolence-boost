@@ -1,0 +1,67 @@
+
+> build
+> vite build
+
+[36mvite v7.3.2 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32m✓[39m 1926 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/client/[22m[32m.assetsignore                      [39m[1m[2m  0.02 kB[22m[1m[22m
+[2mdist/client/[22m[35massets/styles-CIoF4V4h.css         [39m[1m[2m 88.81 kB[22m[1m[22m[2m │ gzip:  14.51 kB[22m
+[2mdist/client/[22m[36massets/stripe-webhook-DtqBFgK5.js  [39m[1m[2m  0.04 kB[22m[1m[22m[2m │ gzip:   0.06 kB[22m
+[2mdist/client/[22m[36massets/check-CzRsgv3s.js           [39m[1m[2m  0.12 kB[22m[1m[22m[2m │ gzip:   0.14 kB[22m
+[2mdist/client/[22m[36massets/heart-TGxy-2di.js           [39m[1m[2m  0.26 kB[22m[1m[22m[2m │ gzip:   0.22 kB[22m
+[2mdist/client/[22m[36massets/trophy-CSfbX8Ab.js          [39m[1m[2m  0.48 kB[22m[1m[22m[2m │ gzip:   0.28 kB[22m
+[2mdist/client/[22m[36massets/textarea-By68YjcO.js        [39m[1m[2m  0.49 kB[22m[1m[22m[2m │ gzip:   0.34 kB[22m
+[2mdist/client/[22m[36massets/sparkles-CdOGsdKN.js        [39m[1m[2m  0.50 kB[22m[1m[22m[2m │ gzip:   0.28 kB[22m
+[2mdist/client/[22m[36massets/input-Cik0xn6W.js           [39m[1m[2m  0.59 kB[22m[1m[22m[2m │ gzip:   0.37 kB[22m
+[2mdist/client/[22m[36massets/x-p5QsrVTF.js               [39m[1m[2m  0.85 kB[22m[1m[22m[2m │ gzip:   0.45 kB[22m
+[2mdist/client/[22m[36massets/label-Bki0hagj.js           [39m[1m[2m  0.92 kB[22m[1m[22m[2m │ gzip:   0.57 kB[22m
+[2mdist/client/[22m[36massets/login-BOmf3dzh.js           [39m[1m[2m  1.99 kB[22m[1m[22m[2m │ gzip:   0.95 kB[22m
+[2mdist/client/[22m[36massets/subscribe-ll2GYoIw.js       [39m[1m[2m  3.11 kB[22m[1m[22m[2m │ gzip:   1.43 kB[22m
+[2mdist/client/[22m[36massets/donate-CnOIBXwf.js          [39m[1m[2m  3.38 kB[22m[1m[22m[2m │ gzip:   1.54 kB[22m
+[2mdist/client/[22m[36massets/signup-BAud9ROq.js          [39m[1m[2m  3.52 kB[22m[1m[22m[2m │ gzip:   1.51 kB[22m
+[2mdist/client/[22m[36massets/charities-b-x3nkUS.js       [39m[1m[2m  5.08 kB[22m[1m[22m[2m │ gzip:   2.16 kB[22m
+[2mdist/client/[22m[36massets/index-6g5sDYP0.js           [39m[1m[2m  5.66 kB[22m[1m[22m[2m │ gzip:   1.96 kB[22m
+[2mdist/client/[22m[36massets/dashboard-DNNbE4Gr.js       [39m[1m[2m 17.14 kB[22m[1m[22m[2m │ gzip:   5.25 kB[22m
+[2mdist/client/[22m[36massets/admin-k6rmnEJR.js           [39m[1m[2m 25.49 kB[22m[1m[22m[2m │ gzip:   7.29 kB[22m
+[2mdist/client/[22m[36massets/Header-C-dN4xtJ.js          [39m[1m[2m 34.11 kB[22m[1m[22m[2m │ gzip:  11.33 kB[22m
+[2mdist/client/[22m[36massets/types-C7jWjZvw.js           [39m[1m[2m 52.94 kB[22m[1m[22m[2m │ gzip:  12.09 kB[22m
+[2mdist/client/[22m[36massets/index-BUd21f3-.js           [39m[1m[33m565.38 kB[39m[22m[2m │ gzip: 167.41 kB[22m
+[32m✓ built in 4.51s[39m
+[36mvite v7.3.2 [32mbuilding ssr environment for production...[36m[39m
+transforming...
+[32m✓[39m 1982 modules transformed.
+rendering chunks...
+Using secrets defined in .env
+[2mdist/server/[22m[32mwrangler.json                                          [39m[1m[2m  1.35 kB[22m[1m[22m
+[2mdist/server/[22m[32m.dev.vars                                              [39m[1m[2m  1.52 kB[22m[1m[22m
+[2mdist/server/[22m[32m.vite/manifest.json                                    [39m[1m[2m  7.53 kB[22m[1m[22m
+[2mdist/server/[22m[35massets/styles-CIoF4V4h.css                             [39m[1m[2m 88.81 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/start-HYkvq4Ni.js                               [39m[1m[2m  0.06 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/stripe-webhook-BTU5dmpx.js                      [39m[1m[2m  0.08 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/__23tanstack-start-plugin-adapters-Cwee5PKy.js  [39m[1m[2m  0.14 kB[22m[1m[22m
+[2mdist/server/[22m[36mindex.js                                               [39m[1m[2m  0.21 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/check-DXJP3Z5D.js                               [39m[1m[2m  0.21 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/heart-To2SR_y8.js                               [39m[1m[2m  0.38 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/trophy-BfWV5EPV.js                              [39m[1m[2m  0.62 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/sparkles-CJOjzW34.js                            [39m[1m[2m  0.65 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/textarea-PLyLnA55.js                            [39m[1m[2m  0.74 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/input-kPO-6ynF.js                               [39m[1m[2m  0.84 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/x-DwFN_tq7.js                                   [39m[1m[2m  1.26 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/label-BHPdrNBI.js                               [39m[1m[2m  1.82 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/_tanstack-start-manifest_v-BOyWja1Z.js          [39m[1m[2m  3.58 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/login-Cf2taGpY.js                               [39m[1m[2m  3.65 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/subscribe-CLNIKCO6.js                           [39m[1m[2m  4.94 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/donate-BO2JVcQx.js                              [39m[1m[2m  5.95 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/signup-DfqEhxXV.js                              [39m[1m[2m  6.27 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/charities-BxEe8lid.js                           [39m[1m[2m  8.65 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/index-h7nPPPUT.js                               [39m[1m[2m  8.69 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/dashboard-Byq_x6mK.js                           [39m[1m[2m 29.82 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/admin-D0TSToSn.js                               [39m[1m[2m 44.25 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/types-BoWyrJuk.js                               [39m[1m[2m105.89 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/Header-2ba4IMBC.js                              [39m[1m[2m111.67 kB[22m[1m[22m
+[2mdist/server/[22m[36massets/worker-entry-BTVsl7Da.js                        [39m[1m[33m732.78 kB[39m[22m
+[2mdist/server/[22m[36massets/router-QHB9OBtE.js                              [39m[1m[33m871.85 kB[39m[22m
+[32m✓ built in 3.77s[39m

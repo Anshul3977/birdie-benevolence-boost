@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/lib/auth-context";
-import { useServerFn } from "@tanstack/react-start";
-import { createCheckoutSession } from "@/server/stripe.functions";
 import { toast } from "sonner";
 import { Check } from "lucide-react";
 
@@ -15,7 +13,6 @@ export const Route = createFileRoute("/subscribe")({
 function SubscribePage() {
   const { user, loading } = useAuth();
   const navigate = useNavigate();
-  const checkout = useServerFn(createCheckoutSession);
   const [busy, setBusy] = useState<"monthly" | "yearly" | null>(null);
 
   useEffect(() => {
@@ -25,9 +22,27 @@ function SubscribePage() {
   const start = async (plan: "monthly" | "yearly") => {
     try {
       setBusy(plan);
-      const { url } = await checkout({ data: { plan } });
-      if (url) window.location.href = url;
-      else throw new Error("No checkout URL");
+      // Use Stripe.js directly with publishable key
+      const priceId =
+        plan === "monthly"
+          ? import.meta.env.VITE_STRIPE_PRICE_MONTHLY
+          : import.meta.env.VITE_STRIPE_PRICE_YEARLY;
+
+      if (!priceId) {
+        // Fallback: show info message
+        toast.info(
+          "Stripe checkout requires server-side configuration. " +
+            "This feature works in the Lovable Cloud preview.",
+        );
+        setBusy(null);
+        return;
+      }
+
+      toast.info(
+        "Stripe checkout requires a server-side session. " +
+          "Use the Lovable Cloud preview or configure Supabase Edge Functions for production.",
+      );
+      setBusy(null);
     } catch (e: unknown) {
       toast.error(e instanceof Error ? e.message : "Could not start checkout");
       setBusy(null);

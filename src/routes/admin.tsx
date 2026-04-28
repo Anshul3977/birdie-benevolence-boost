@@ -7,8 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useAuth } from "@/lib/auth-context";
 import { supabase } from "@/integrations/supabase/client";
-import { useServerFn } from "@tanstack/react-start";
-import { simulateDraw, publishDraw } from "@/server/draws.functions";
+import { simulateDrawClient, publishDrawClient } from "@/lib/draws-engine";
 import { toast } from "sonner";
 import {
   ShieldAlert,
@@ -438,8 +437,8 @@ function DrawsSection({ onChange }: { onChange: () => void }) {
   const [sim, setSim] = useState<SimResult | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
 
-  const simFn = useServerFn(simulateDraw);
-  const pubFn = useServerFn(publishDraw);
+  const simFn = simulateDrawClient;
+  const pubFn = publishDrawClient;
 
   const load = useCallback(async () => {
     const { data } = await supabase
@@ -494,7 +493,7 @@ function DrawsSection({ onChange }: { onChange: () => void }) {
     setBusy(id);
     setSim(null);
     try {
-      const r = (await simFn({ data: { drawId: id } })) as SimResult;
+      const r = await simFn(id);
       setSim(r);
     } catch (e: unknown) {
       toast.error(e instanceof Error ? e.message : "Simulation failed");
@@ -507,7 +506,7 @@ function DrawsSection({ onChange }: { onChange: () => void }) {
     if (!confirm("Publish this draw? Winners will be created.")) return;
     setBusy(id);
     try {
-      const r = (await pubFn({ data: { drawId: id } })) as { winnersCreated: number };
+      const r = await pubFn(id);
       toast.success(`Published — ${r.winnersCreated} winner(s)`);
       setSim(null);
       load();
