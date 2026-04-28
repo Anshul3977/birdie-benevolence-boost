@@ -1,6 +1,7 @@
 {
-  "outputDirectory": ".output",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/client",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
